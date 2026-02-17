@@ -1,0 +1,26 @@
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+scipy>=1.11.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+tqdm>=4.66.0
+
+# Note: In production, you might install torch via a specific index-url for CUDA support
+torch>=2.2.0
+
+transformers>=4.38.0
+datasets>=2.17.0
+accelerate>=0.27.0
+tokenizers>=0.15.0
+
+spacy>=3.7.0
+stanza>=1.8.0
+# spaCy Russian model (download separately)
+# https://github.com/explosion/spacy-models/releases/download/ru_core_news_md-3.7.0/ru_core_news_md-3.7.0.tar.gz
+
+
+coral-pytorch>=1.4.0
+pydantic>=2.6.0
+jupyterlab>=4.1.0
+ipykernel>=6.29.0
