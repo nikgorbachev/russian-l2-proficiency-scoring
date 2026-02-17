@@ -37,6 +37,8 @@ This repository is organized as a sequential research pipeline, corresponding to
 ```text
 .
 ├── data/                       # (Excluded from repo for privacy) Dataset placeholders
+├── docs/
+│   ├── Gorbachev_Nikolai_2026_Russian_AES_Thesis.pdf  # Full Thesis Text
 ├── notebooks/                  # Experimental pipeline
 │   ├── 01_preprocessing/       # Stanza/spaCy pipelines for text normalization
 │   ├── 02_feature_extraction/  # Implementation of 24 linguistic features (Syntactic/Lexical)
@@ -46,7 +48,6 @@ This repository is organized as a sequential research pipeline, corresponding to
 │   ├── 06_fusion/              # Early and Late fusion experiments
 │   └── 07_visualizations/      # Generation of Confusion Matrices and Error Analysis plots
 ├── requirements.txt            # Python dependencies
-├── Gorbachev_Nikolai_2026_Russian_AES_Thesis.pdf  # Full Thesis Text
 └── README.md                   # Project documentation
 ```
 
