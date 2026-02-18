@@ -14,20 +14,49 @@
 
 ## Abstract
 
-Automated Essay Scoring (AES) systems are critical for scaling language assessment, yet most research focuses on English and large-scale datasets. This thesis addresses the challenge of developing reliable AES models for Russian as a Second Language (L2), a morphologically rich language, within the resource-constrained context of institutional learning. The study utilizes a real-world dataset of approximately 1,100 learner essays from the Russian language course at the Middlebury Language School (VT, USA), rated according to the ACTFL proficiency guidelines.
+Automated Essay Scoring (AES) systems are critical for scaling language assessment, yet most research focuses on English and large-scale datasets. This thesis addresses the challenge of developing reliable AES models for Russian as a Second Language (L2), a morphologically rich language, within the resource-constrained context of institutional learning. The study utilizes a real-world dataset of ~1,100 learner essays from the Russian language course at the Middlebury Language School (VT, USA), rated according to the ACTFL (American Council on the Teaching of Foreign Languages) proficiency guidelines.
 
 The research systematically evaluates three modeling paradigms: (1) feature-based statistical models relying on engineered linguistic metrics (e.g., syntactic complexity, lexical diversity); (2) deep representation learning using fine-tuned multilingual Transformers (XLM-RoBERTa); and (3) hybrid fusion strategies. A central innovation of this work is the application of **Ordinal Regression objectives**, specifically **Consistent Rank Logits (CORAL)** and **Conditional Ordinal Regression (CORN)**, to explicitly model the ordered nature of proficiency levels.
 
-Results demonstrate that the Deep Ordinal approach (**XLM-RoBERTa + CORAL**) achieves competitive performance under low-resource conditions, substantially outperforming feature-based baselines and standard cross-entropy models.
+Results demonstrate that the deep ordinal approach (**XLM-RoBERTa + CORAL**) achieves competitive performance under low-resource conditions, substantially outperforming feature-based baselines and standard cross-entropy models.
+
+
+
+## Research Context
+
+This work contributes to:
+- Low-resource AES research
+- Ordinal deep learning in NLP
+- Modeling morphologically rich languages (Russian)
 
 
 ## Key Contributions
 
-- First application of CORAL and CORN ordinal objectives to Russian L2 AES.
+- Application of CORAL and CORN ordinal objectives to Russian L2 AES.
 - Empirical comparison of feature-based, transformer-based, and fusion paradigms.
 - Analysis of linguistic feature evolution across ordinal proficiency thresholds.
 - Demonstration that ordinal objectives improve rank consistency over cross-entropy.
 
+
+## Why Ordinal Learning?
+
+Standard classification treats proficiency levels as independent categories.  
+However, language proficiency is inherently ordered (e.g., Intermediate < Advanced < Superior).
+
+Ordinal objectives (CORAL, CORN):
+- Enforce rank consistency
+- Penalize distant misclassifications more strongly
+- Reduce prediction incoherence (e.g., skipping levels)
+
+This thesis demonstrates that explicitly modeling this structure improves evaluation metrics such as QWK and MAE.
+
+
+## Main Result
+
+Best Model: XLM-RoBERTa + CORAL head
+QWK: 0.8677 ± 0.0083
+MAE: 0.4956 ± 0.0155
+RMSE: 0.7663 ± 0.0391
 
 
 
@@ -88,6 +117,13 @@ Models are evaluated using:
 The dataset used in this study contains learner essays collected within an institutional setting and cannot be publicly released due to privacy agreements. 
 
 However, the `notebooks/` directory includes full preprocessing and modeling pipelines that can be applied to any comparable proficiency-annotated dataset (e.g., standard AES corpora).
+
+
+## Future Work
+
+- Larger multi-institution Russian L2 corpora
+- Multitask learning with linguistic auxiliary objectives
+- Deployment as a web-based scoring assistant
 
 
 
