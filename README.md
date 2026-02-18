@@ -1,5 +1,7 @@
 # Automated Essay Scoring for Russian as a Second Language: A Deep Ordinal Learning Approach
 
+[![Read the Thesis](https://img.shields.io/badge/📖-Read_the_Thesis-blue?style=for-the-badge)](./docs/Gorbachev_Nikolai_2026_Russian_AES_Thesis.pdf)
+
 **Master's Thesis in Digital Humanities and Digital Knowledge**  
 **University of Bologna (UNIBO)**  
 
@@ -54,7 +56,7 @@ This repository is organized as a sequential research pipeline, corresponding to
 ## Reproducibility
 
 Environment:
-- Python 3.10
+- Python 3.12
 - PyTorch 2.x
 - HuggingFace Transformers
 - Scikit-learn
