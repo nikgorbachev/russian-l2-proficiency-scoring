@@ -95,6 +95,7 @@ However, the `notebooks/` directory includes full preprocessing and modeling pip
 
 If you use this code, please cite the thesis:
 
+```bibtex
 @mastersthesis{gorbachev2026russianAES,
   author  = {Nikolai Gorbachev},
   title   = {Automated Essay Scoring for Russian as a Second Language: A Deep Ordinal Learning Approach},
@@ -102,3 +103,4 @@ If you use this code, please cite the thesis:
   year    = {2026},
   address = {Bologna, Italy}
 }
+```
